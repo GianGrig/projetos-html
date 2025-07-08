@@ -1,2 +1,6 @@
-# projetos-html
-Meus projetos desenvolvidos durante o plano de estudo de HTML e CSS para desenvolvimento web.Meus projetos desenvolvidos durante o plano de estudo de HTML e CSS para desenvolvimento web.
+# Meus Projetos de Estudo em HTML e CSS
+
+Este repositório contém todos os projetos práticos que desenvolvi ao seguir o "PLANO DE ESTUDO – HTML PARA DESENVOLVIMENTO WEB".
+
+## Projetos:
+- Em breve...

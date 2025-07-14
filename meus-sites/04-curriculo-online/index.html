@@ -4,94 +4,50 @@
     <meta charset="UTF-8" />
     <title>Minha Página Pessoal</title>
 
-    <style>
-      body {
-        background-color: #f4f4f4; /* Cor de fundo suave */
-        font-family: Verdana, Geneva, Tahoma, sans-serif; /* Fonte padrão */
-        color: #333; /* Cor do texto */
-        margin: 0; /* Remove a margem padrão do navegador */
-        padding: 0; /* Remove o preenchimento padrão do navegador */
-      }
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-      header {
-        background-color: #151515; /* Adiciona uma cor de fundo ao cabeçalho */
-        color: rgb(
-          152,
-          152,
-          152
-        ); /* Muda a cor do texto do cabeçalho para branco */
-        padding: 20px; /* Adiciona espaçamento interno no cabeçalho */
-        text-align: center; /* Centraliza o texto do cabeçalho */
-      }
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
-      main {
-        padding: 20px; /* Adiciona espaçamento interno na área principal */
-      }
-
-      #container {
-        width: 80%; /* O container ocupará 80% da largura da tela */
-        max-width: 900px; /* A largura máxima será de 900 pixels */
-        margin: auto; /* Truque para centralizar o container na tela */
-        background-color: white; /* Cor de fundo branca para o conteúdo */
-        padding: 20px; /* Espaçamento interno */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
-      }
-
-      section {
-        margin-bottom: 20px; /* Adiciona uma margem na parte inferior de cada seção */
-      }
-
-      h1 {
-        color: rgb(
-          228,
-          228,
-          228
-        ); /* Muda a cor do título principal para branco */
-      }
-
-      h2 {
-        color: #252525; /* Muda a cor dos subtítulos para azul */
-      }
-
-      p {
-        font-family: Arial, Helvetica, sans-serif; /* Fonte do parágrafo */
-        font-size: 16px; /* Tamanho da fonte do parágrafo */
-        line-height: 1.5; /* Espaçamento entre linhas */
-      }
-
-      a {
-        color: rgb(152, 152, 152); /* Cor dos links */
-        text-decoration: none; /* Remove o sublinhado dos links */
-      }
-
-      li {
-        margin-bottom: 10px; /* Espaçamento abaixo de cada item da lista */
-      }
-
-      img {
-        border-radius: 50%; /* Torna a imagem circular */
-        margin-bottom: 20px; /* Espaçamento abaixo da imagem */
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <img src="Minha_foto.jpg" alt="Foto de Gianluca Grignani" width="150" />
+      <img src="Minha_foto.jpg" alt="Foto de Gianluca Grignani" width="100" />
       <h1>Gianluca Grignani</h1>
+
+      <nav>
+        <a href="#objetivos">Objetivos</a> 
+        <a href="#formacao">Formação</a> 
+        <a href="#habilidades">Habilidades</a> 
+        <a href="#cursos">Cursos</a> 
+        <a href="#idiomas">Idiomas</a>
+      </nav>
+
       <p>
-        Telfone: (47) 99985-3436 | LinkedIn:<a
-          href="https://www.linkedin.com/in/gianluca-grignani-a30b64264/"
-          >Gianluca Grignani</a
+        <i class="fa-solid fa-phone"></i> (47) 99985-3436 |
+        <a href="https://www.linkedin.com/in/gianluca-grignani-a30b64264/"
+          ><i class="fa-brands fa-linkedin"></i> Gianluca Grignani</a
         >
-        | GitHub: <a href="https://github.com/GianGrig">GianGrig</a>
-        | Email: grignanigian14@gmail.com
+        |
+        <a href="https://github.com/GianGrig"
+          ><i class="fa-brands fa-github"></i> GianGrig</a
+        >
+        | <i class="fa-solid fa-envelope"></i> grignanigian14@gmail.com
       </p>
     </header>
 
     <main>
       <div id="container">
-        <section>
-          <h2>OBJETIVOS PROFICIONAIS</h2>
+        <section id="objetivos">
+          <h2>OBJETIVOS PROFISSIONAIS</h2>
           <p>
             Busco uma oportunidade como desenvolvedor júnior ou estagiário para
             aplicar meus sólidos conhecimentos no ecossistema Java. Tenho
@@ -102,7 +58,7 @@
           </p>
         </section>
 
-        <section>
+        <section id="formacao">
           <h2>FORMAÇÃO</h2>
           <ul>
             <li>
@@ -116,7 +72,7 @@
           </ul>
         </section>
 
-        <section>
+        <section id="habilidades">
           <h2>HABILIDADES COMPORTAMENTAIS</h2>
           <ul>
             <li>Motivação para o aprendizado e desenvolvimento constantes.</li>
@@ -162,9 +118,9 @@
               linguagem.
             </li>
             <li>
-              <strong>Git e GitHub (Intermediário):</strong> Controle de versão de projetos, comandos
-              essenciais (commit, push, pull), hospedagem e compartilhamento de
-              repositórios.
+              <strong>Git e GitHub (Intermediário):</strong> Controle de versão
+              de projetos, comandos essenciais (commit, push, pull), hospedagem
+              e compartilhamento de repositórios.
             </li>
             <li>
               <strong>HTML5 (intermediário):</strong> estrutura semântica,
@@ -177,7 +133,7 @@
           </ul>
         </section>
 
-        <section>
+        <section id="cursos">
           <h2>CURSOS</h2>
           <ul>
             <li>
@@ -197,15 +153,15 @@
           </ul>
         </section>
 
-        <section>
-            <h2>IDIOMAS</h2>
-            <ul>
-              <li>
-                <strong>Português:</strong> Nativo.
-              </li>
-              <li>
-                <strong>Inglês:</strong> Básico (Em processo de aprimoramento para maior proficiência).
-              </li>
+        <section id="idiomas">
+          <h2>IDIOMAS</h2>
+          <ul>
+            <li><strong>Português:</strong> Nativo.</li>
+            <li>
+              <strong>Inglês:</strong> Básico (Em processo de aprimoramento para
+              maior proficiência).
+            </li>
+          </ul>
         </section>
       </div>
     </main>

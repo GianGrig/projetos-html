@@ -1,0 +1,246 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Gliker";
+  src: url("fonts/Gliker-Regular.woff2") format("woff2"),
+    url("fonts/Gliker-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gliker";
+  src: url("fonts/Gliker-Bold.woff2") format("woff2"),
+    url("fonts/Gliker-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: "Gliker", sans-serif; /* Fonte Gliker para um toque artesanal */
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  background-color: #de2725; 
+}
+
+html {
+  scroll-behavior: smooth; /* Rolagem suave ao clicar nos links */
+}
+
+.header {
+  background-color: #de2725;
+  padding: 10px 20px; /* Espaçamento interno */
+  display: flex;
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: space-between; /* Joga a navegação para a esquerda e o horário para a direita */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  /* A altura será definida pelo conteúdo, mas podemos forçar se necessário */
+  height: 80px;
+}
+
+.logo-header {
+  /* Para a logo sobrepor a barra, usamos position absolute */
+  position: absolute; 
+  left: 50%; /* Coloca a borda esquerda da imagem no meio da tela */
+  transform: translateX(-50%); /* Puxa a imagem 50% da sua própria largura para a esquerda, centralizando-a perfeitamente */
+  top: 10px; /* Desce a logo para ela "vazar" para fora do header. Ajuste este valor! */
+  width: 120px; /* Aumentei um pouco o tamanho para ficar mais parecido com a imagem */
+  height: auto;
+  border: 4px solid #de2725; /* Borda de 4px, sólida, na cor vermelha do header */
+  border-radius: 50%;       /* Deixa a imagem e sua borda perfeitamente redondas */
+}
+
+.nav {
+  display: flex; /* Para alinhar os links um ao lado do outro */
+  gap: 25px; /* Espaço entre os links */
+}
+
+.nav a {
+  color: #f5bf2f;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px; /* Aumentei um pouco para parecer mais com a imagem */
+  transition: color 0.3s ease; /* Anima a troca de cor ao passar o mouse */
+}
+
+.nav a:hover {
+  color: #6aa542; /* Cor branca ao passar o mouse */
+}
+
+.horario-funcionamento p {
+  color: #f5bf2f;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-size: 22px;
+  margin: 0; /* Remove qualquer margem padrão do parágrafo */
+}
+
+.section-inicio {
+  background-image: linear-gradient(#f5c02f5e), url("img/pizza_cortada.png"); /* Cor de fundo amarela suave */
+  background-size: cover;
+  background-position: center;
+  text-align: absolute;
+  padding: 100px 130px; /* Espaçamento interno */
+  padding-top: 280px; /* Espaçamento interno no topo para não sobrepor o header fixo */
+}
+
+.botao {
+  background-color: #de2725; /* Cor de fundo do botão */
+  color: #f5bf2f; /* Cor do texto do botão */
+  padding: 13px 40px; /* Espaçamento interno do botão */
+  font-size: 30px; /* Tamanho da fonte do botão */
+  text-decoration: none; /* Remove o sublinhado do link */
+  border-radius: 50px; /* Bordas arredondadas */
+  font-weight: bold; /* Texto em negrito */
+  cursor: pointer; /* Muda o cursor para a "mãozinha" ao passar por cima */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Anima a troca de cor em 0.3 segundos */
+  display: inline-block; /* Garante que o botão se comporte bem com margens */
+  margin-top: 10px; /* Adiciona espaço acima do botão */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.botao:hover {
+  background-color: #6aa542; /* Um tom de verde (SeaGreen) */
+  color: #FFFFFF; /* Cor da letra: Branca */
+}
+
+.h2-inicio {
+  color: #3c1107;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.418);
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.p-inicio {
+  color: #3c1107;
+  font-size: 32px;
+  margin-top: 20px;
+  max-width: 800px;
+  line-height: 1.5; /* Melhora a legibilidade do parágrafo */
+}
+
+.section-sobre {
+  /* Fundo com Degradê e Imagem */
+  background-color: #821d1a; /* Cor de fundo caso a imagem não carregue */
+  
+  /* A mágica acontece aqui: aplicamos um degradê sobre a imagem de fundo */
+  background-image: 
+    linear-gradient(to right, #821d1a 60%, rgba(130, 29, 26, 0)), /* Degradê da esquerda para a direita */
+    url('img/pizzaria.png'); /* !!! TROQUE PELO CAMINHO DA SUA IMAGEM !!! */
+
+  /* Controle do Posicionamento e Tamanho da Imagem */
+  background-repeat: no-repeat; /* Para a imagem não se repetir */
+  background-position: right center; /* Posiciona a imagem à direita e no centro vertical */
+  background-size: contain; /* Ajusta o tamanho da imagem para que ela sempre caiba na seção */
+
+  /* Espaçamentos Internos */
+  padding: 120px 120px; /* Espaçamento geral (topo/baixo e laterais) */
+}
+
+.h2-sobre {
+  color: #f5bf2f; /* Cor do título */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.418); /* Sombra do texto */
+  font-size: 60px; /* Tamanho do título */
+}
+
+.p-sobre {
+  color: #f5bf2f; /* Cor do parágrafo */
+  font-size: 32px; /* Tamanho do parágrafo */
+  margin-top: 20px; /* Margem superior */
+  max-width: 650px; /* Largura máxima do parágrafo */
+  line-height: 1.5; /* Melhora a legibilidade do parágrafo */
+}
+
+.section-servicos {
+  background-color: #f5bf2f; /* Cor de fundo amarela suave */
+  background-image: linear-gradient(to left, #f5bf2f 55%, rgba(245, 191, 47, 0)), /* Degradê da esquerda para a direita */
+    url('img/pizzaiolo.png'); /* Imagem de fundo */
+  background-repeat: no-repeat; /* Para a imagem não se repetir */
+  background-position: left center; /* Posiciona a imagem à esquerda e no centro vertical*/
+  background-size: contain; /* Ajusta o tamanho da imagem para que ela sempre caiba na seção */
+  padding: 120px 50px; /* Espaçamento interno */
+
+  display: flex;
+  justify-content: flex-end; /* Empurra o conteúdo para o final (direita) */
+  align-items: center;       /* Alinha o bloco de conteúdo verticalmente ao centro */
+}
+
+.conteudo-servicos {
+  text-align: left; /* Alinha o texto dentro do bloco à esquerda, como na imagem */
+}
+
+.h2-servicos {
+  color: #de2725; /* Cor do título */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.418); /* Sombra do texto */
+  font-size: 60px; /* Tamanho do título */
+}
+
+.h3-servicos {
+  color: #de2725; /* Cor do subtítulo */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.418); /* Sombra do texto */
+  font-size: 40px; /* Tamanho do subtítulo */
+  margin-bottom: 0px; /* Margem inferior negativa para aproximar o subtítulo do parágrafo */
+}
+
+.p-servicos {
+  color: #de2725; /* Cor do parágrafo */
+  font-size: 32px; /* Tamanho do parágrafo */
+  margin-top: 5px; /* Margem superior */
+  line-height: 1.5; /* Melhora a legibilidade do parágrafo */
+  
+}
+
+.section-contato {
+  background-color: #6aa542; /* Cor de fundo amarela suave */
+  background-image: 
+    linear-gradient(to right, #6aa542 65%, rgba(130, 29, 26, 0)), /* Degradê da esquerda para a direita */
+    url('img/localizacao.png'); /* !!! TROQUE PELO CAMINHO DA SUA IMAGEM !!! */
+
+  /* Controle do Posicionamento e Tamanho da Imagem */
+  background-repeat: no-repeat; /* Para a imagem não se repetir */
+  background-position: right center; /* Posiciona a imagem à direita e no centro vertical */
+  background-size: contain; /* Ajusta o tamanho da imagem para que ela sempre caiba na seção */
+
+  /* Espaçamentos Internos */
+  padding: 130px 120px; /* Espaçamento geral (topo/baixo e laterais) */
+}
+
+.h2-contato {
+  color: #3c1107; /* Cor do título */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.418); /* Sombra do texto */
+  font-size: 60px; /* Tamanho do título */
+}
+
+.p-contato {
+  color: #3c1107; /* Cor do parágrafo */
+  font-size: 32px; /* Tamanho do parágrafo */
+  margin-top: 20px; /* Margem superior */
+  max-width: 900px; /* Largura máxima do parágrafo */
+  line-height: 1.5; /* Melhora a legibilidade do parágrafo */
+}
+
+.fa-solid {
+  margin-right: 10px; /* Cria um espaço de 10px à direita de cada ícone */
+}
+
+.fa-brands {
+  margin-right: 10px; /* Cria um espaço de 10px à direita de cada ícone */
+}
+
+.footer {
+  background-color: #de2725; /* Cor de fundo do rodapé */
+  color: #f5bf2f; /* Cor do texto do rodapé */
+  font-size: 22px; /* Tamanho da fonte do rodapé */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra do texto do rodapé */
+  text-align: center; /* Centraliza o texto do rodapé */
+  padding: 20px; /* Espaçamento interno do rodapé */
+  position: relative; /* Permite que o rodapé se posicione corretamente na página */
+}
